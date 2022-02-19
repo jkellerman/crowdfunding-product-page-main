@@ -1,3 +1,29 @@
+* {
+  box-sizing: border-box;
+  font-family: "Commissioner", sans-serif;
+}
+
+:root {
+  --Moderate-cyan: hsl(176, 50%, 47%);
+  --Dark-cyan: hsl(176, 72%, 28%);
+  --Black: hsl(0, 0%, 0%);
+  --Dark-gray: hsl(0, 0%, 48%);
+}
+
+body {
+  font-size: 16px;
+  margin: 0;
+}
+
+header {
+  background-image: url(images/image-hero-mobile.png);
+  background-repeat: no-repeat;
+  background-position-x: -122px;
+  background-position-y: -50px;
+  background-size: 600px 400px;
+  height: 300px;
+}
+
 /* ============
 footer
 ============== */
