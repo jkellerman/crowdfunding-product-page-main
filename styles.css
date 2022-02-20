@@ -7,22 +7,229 @@
   --Moderate-cyan: hsl(176, 50%, 47%);
   --Dark-cyan: hsl(176, 72%, 28%);
   --Black: hsl(0, 0%, 0%);
+  --Border: hsla(0, 0%, 0%, 0.1);
   --Dark-gray: hsl(0, 0%, 48%);
   --light-sea-green: hsl(176, 50%, 47%);
+  --Snow: hsl(0, 0%, 98%);
+  --progress-background: hsl(30, 23%, 95%);
+  --nobel: hsl(0, 0%, 59%);
 }
 
 body {
   font-size: 16px;
   margin: 0;
+  background: var(--Snow);
 }
+
+/* ============
+header/nav
+============= */
 
 header {
   background-image: url(images/image-hero-mobile.png);
   background-repeat: no-repeat;
-  background-position-x: -122px;
-  background-position-y: -50px;
+  background-position-x: 50%;
+  background-position-y: 50%;
   background-size: 600px 400px;
   height: 300px;
+}
+
+.navbar-mobile {
+  padding-top: 2em;
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+/* ==============
+ universal
+ ============= */
+
+.modal,
+.container {
+  width: 85%;
+  margin: 0 auto 1.5em;
+  background: #ffffff;
+  border-radius: 8px;
+  padding-bottom: 2.5em;
+}
+
+.btn {
+  background: var(--Moderate-cyan);
+  border: none;
+  outline: none;
+  border-radius: 33.5px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* ============
+back-project container */
+
+.back-project-container {
+  margin-top: -3.5em;
+  padding: 3.25em 0 2.5em;
+  position: relative;
+}
+
+.logo-mastercraft {
+  position: absolute;
+  top: -1.9em;
+  left: 8em;
+}
+
+h1 {
+  font-size: 1.25rem;
+  text-align: center;
+  width: 85%;
+  margin: 0 auto 1em;
+}
+
+.subheading {
+  font-size: 0.875em;
+  text-align: center;
+  width: 95%;
+  margin: 0 auto 1.5em;
+  color: var(--Dark-gray);
+}
+
+.cta-container {
+  display: flex;
+  width: 90%;
+  justify-content: space-evenly;
+  gap: 0.5625em;
+  margin: 0 auto;
+}
+
+.cta-btn {
+  font-size: 1rem;
+  font-weight: 500;
+  height: 56px;
+  padding: 0 2.9em;
+}
+
+/* =============
+tracker container
+============== */
+
+.tracker-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.total-container {
+  text-align: center;
+  margin: 2em 0;
+}
+
+.total {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5625em;
+}
+
+.total-sub {
+  color: var(--Dark-gray);
+  font-size: 0.875em;
+}
+
+.line {
+  width: 80px;
+  height: 1px;
+  border: 0.25px solid var(--Border);
+}
+
+.progress-bar {
+  width: 85%;
+  height: 12px;
+  background-color: var(--progress-background);
+  border-radius: 33.5px;
+  padding-left: 0.2em;
+  position: relative;
+}
+
+.progressing {
+  position: absolute;
+  width: 89%;
+  height: 12px;
+  left: 0;
+  background: var(--Moderate-cyan);
+  border-radius: 33.5px;
+}
+
+/* =============
+main-container
+============= */
+
+.main-container {
+  background: #fff;
+  padding-top: 2.5em;
+}
+
+h2 {
+  font-size: 1.125rem;
+}
+
+.main-paragraph {
+  font-size: 0.875em;
+  color: var(--nobel);
+  line-height: 1.5em;
+  width: 100%;
+  margin: 1.5em 0;
+}
+
+.about-project-container {
+  padding-bottom: 0;
+}
+
+.edition-container {
+  width: 85%;
+  border: 1px solid var(--Border);
+  padding: 1.5em;
+  font-size: 0.875em;
+}
+
+.edition-header {
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
+
+.edition-subheading {
+  color: var(--Moderate-cyan);
+}
+
+.edition-paragraph {
+  color: var(--Dark-gray);
+  font-weight: 400;
+  line-height: 1.5em;
+}
+
+.edition-amount-container {
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
+  margin-bottom: 1.5em;
+}
+
+.edition-amount-left {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.left {
+  font-size: 0.9375em;
+  color: var(--Dark-gray);
+}
+
+.select-reward-btn {
+  font-size: 0.875em;
+  font-weight: 500;
+  height: 48px;
+  padding: 0 3.25em;
 }
 
 /* ==============
@@ -61,6 +268,14 @@ radio
 
 .radio__input:checked + .checkmark::after {
   transform: scale(1);
+}
+
+/* =========
+modal
+=========== */
+
+.modal {
+  display: none;
 }
 
 /* ============
