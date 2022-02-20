@@ -8,6 +8,7 @@
   --Dark-cyan: hsl(176, 72%, 28%);
   --Black: hsl(0, 0%, 0%);
   --Dark-gray: hsl(0, 0%, 48%);
+  --light-sea-green: hsl(176, 50%, 47%);
 }
 
 body {
@@ -22,6 +23,44 @@ header {
   background-position-y: -50px;
   background-size: 600px 400px;
   height: 300px;
+}
+
+/* ==============
+radio
+=============== */
+
+.radio {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.radio__input {
+  display: none;
+}
+
+.checkmark {
+  width: 1.5em;
+  height: 1.5em;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 50%;
+  padding: 0.3125em;
+  margin-right: 24px;
+}
+
+.checkmark::after {
+  content: "";
+  width: 0.75em;
+  height: 0.75em;
+  display: block;
+  background: var(--light-sea-green);
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 0.15s;
+}
+
+.radio__input:checked + .checkmark::after {
+  transform: scale(1);
 }
 
 /* ============
