@@ -32,6 +32,8 @@ header {
   background-position-y: 50%;
   background-size: 600px 400px;
   height: 300px;
+  position: relative;
+  filter: contrast(130%);
 }
 
 .navbar-mobile {
@@ -43,8 +45,13 @@ header {
   margin: 0 auto;
 }
 
+.logo {
+  z-index: 4;
+}
+
 .hamburger {
   cursor: pointer;
+  z-index: 4;
 }
 
 /* ==============
@@ -84,7 +91,7 @@ back-project container */
 
 .logo-mastercraft {
   position: absolute;
-  top: -10%;
+  top: -11%;
 }
 
 h1 {
