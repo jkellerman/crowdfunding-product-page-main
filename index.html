@@ -147,16 +147,19 @@
       
       <!-- modal -->
 
-      <div class="modal">
-        <div class="modal-header">
-          <span>Back this project</span>
-          <img src="images/icon-close-modal.svg" alt="icon-close" />
+      <div class="modal main-container">
+        <div class="container about-project-container">
+          <div class="modal-header">
+            <span>Back this project</span>
+            <img class="modal-close-btn" src="images/icon-close-modal.svg" alt="icon-close" />
+          </div>
+          <p class="main-paragraph">
+            Want to support us in bringing Mastercraft Bamboo Monitor Riser out in
+            the world?
+          </p>
         </div>
-        <p>
-          Want to support us in bringing Mastercraft Bamboo Monitor Riser out in
-          the world?
-        </p>
-        <div class="container modal-container">
+        
+        <div class="container modal-container edition-container">
           <label for="radio-pledge" class="radio">
             <input
               type="radio"
@@ -165,15 +168,15 @@
               class="radio__input"
             />
             <div class="checkmark"></div>
-            <div class="modal-container-header">Pledge with no reward</div>
+            <div class="modal-container-header edition-header no-reward-header">Pledge with no reward</div>
           </label>
-          <p>
+          <p class="edition-paragraph">
             Choose to support us without a reward if you simply believe in our
             project. As a backer, you will be signed up to receive product
             updates via email.
           </p>
         </div>
-        <div class="container modal-container">
+        <div class="container modal-container edition-container">
           <label for="radio-bamboo-stand" class="radio">
             <input
               type="radio"
@@ -182,25 +185,28 @@
               class="radio__input"
             />
             <div class="checkmark"></div>
-            <div class="modal-edition-container">
-              <div class="modal-edition-container-header">Bamboo Stand</div>
-              <div class="modal-edition-container-subheading">
+            <div class="modal-edition-container ">
+              <div class="modal-edition-container-header edition-header">Bamboo Stand</div>
+              <div class="modal-edition-container-subheading edition-subheading">
                 Pledge £25 or more
               </div>
             </div>
+            
           </label>
-          <p>
+          <p class="edition-paragraph">
             You get an ergonomic stand made of natural bamboo. You've helped us
             launch our promotional campaign, and you’ll be added to a special
             Backer member list.
           </p>
+        
           <div class="modal-edition-footer-container">
-            <div class="modal-edition-amount-container">
+            <div class="modal-edition-amount-container edition-amount-container">
               <div class="modal-edition-amount-left modal-bamboo-edition-amount-left">101</div>
-              <div class="modal-left">left</div>
+              <div class="modal-left left">left</div>
             </div>
         </div>
-        <div class="container modal-container">
+      </div>
+        <div class="container modal-container edition-container">
           <label for="radio-black-edition-stand" class="radio">
             <input
               type="radio"
@@ -210,49 +216,50 @@
             />
             <div class="checkmark"></div>
             <div class="modal-edition-container">
-              <div class="modal-edition-container-header">Black Edition Stand</div>
-              <div class="modal-edition-container-subheading">
+              <div class="modal-edition-container-header edition-header">Black Edition Stand</div>
+              <div class="modal-edition-container-subheading edition-subheading">
                 Pledge £75 or more
               </div>
             </div>
           </label>
-          <p>
+          <p class="edition-paragraph">
             You get a Black Special Edition
             computer stand and a personal thank you. You’ll be added to our Backer
             member list. Shipping is included.
           </p>
           <div class="modal-edition-footer-container">
-            <div class="modal-edition-amount-container">
+            <div class="modal-edition-amount-container edition-amount-container">
               <div class="modal-edition-amount-left modal-bamboo-edition-amount-left">64</div>
-              <div class="modal-left">left</div>
+              <div class="modal-left left">left</div>
             </div>
         </div>
       </div>
-      <div class="container modal-container">
-        <label for="radio-black-edition-stand" class="radio">
+      <div class="container modal-container edition-container out-of-stock">
+        <label for="radio-mahogany-special-edition-stand" class="radio out-of-stock-radio" >
           <input
             type="radio"
             name="radioField"
-            id="radio-black-edition-stand"
+            id="radio-mahogany-special-edition-stand"
             class="radio__input"
+            disabled
           />
           <div class="checkmark"></div>
-          <div class="modal-edition-container">
-            <div class="modal-edition-container-header">Mahogany Special Edition</div>
-            <div class="modal-edition-container-subheading">
+          <div class="modal-edition-container ">
+            <div class="modal-edition-container-header edition-header">Mahogany Special Edition</div>
+            <div class="modal-edition-container-subheading edition-subheading">
               Pledge £200 or more
             </div>
           </div>
         </label>
-        <p>
+        <p class="edition-paragraph">
           You get two Special Edition
           Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added
           to our Backer member list. Shipping is included.
         </p>
         <div class="modal-edition-footer-container">
-          <div class="modal-edition-amount-container">
+          <div class="modal-edition-amount-container edition-amount-container">
             <div class="modal-edition-amount-left modal-bamboo-edition-amount-left">0</div>
-            <div class="modal-left">left</div>
+            <div class="modal-left left">left</div>
           </div>
       </div>
     </div>

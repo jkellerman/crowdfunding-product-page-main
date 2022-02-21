@@ -76,6 +76,12 @@ header {
   padding-bottom: 2.5em;
 }
 
+.modal-header span,
+h2 {
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
 .btn {
   background: var(--Moderate-cyan);
   border: none;
@@ -193,10 +199,6 @@ main-container
   padding-top: 2.5em;
 }
 
-h2 {
-  font-size: 1.125rem;
-}
-
 .main-paragraph {
   font-size: 0.875em;
   color: var(--nobel);
@@ -307,7 +309,31 @@ modal
 =========== */
 
 .modal {
-  display: none;
+  /* display: none; */
+  padding-bottom: 0.4375em;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-close-btn {
+  cursor: pointer;
+}
+
+.no-reward-header {
+  margin: 0;
+}
+
+.modal-edition-amount-left {
+  font-weight: 700;
+  font-size: 1.125em;
+}
+
+.out-of-stock-radio {
+  cursor: unset;
 }
 
 /* ============
