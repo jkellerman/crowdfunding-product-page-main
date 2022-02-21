@@ -91,6 +91,10 @@ h2 {
   cursor: pointer;
 }
 
+.bookmark {
+  cursor: pointer;
+}
+
 /* ============
 back-project container */
 
@@ -197,6 +201,7 @@ main-container
 .main-container {
   background: #fff;
   padding-top: 2.5em;
+  padding-bottom: 1.25em;
 }
 
 .main-paragraph {
@@ -309,8 +314,11 @@ modal
 =========== */
 
 .modal {
-  /* display: none; */
+  display: none;
   padding-bottom: 0.4375em;
+  position: absolute;
+  top: 18%;
+  left: 7.5%;
 }
 
 .modal-header {
