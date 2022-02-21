@@ -43,6 +43,10 @@ header {
   margin: 0 auto;
 }
 
+.hamburger {
+  cursor: pointer;
+}
+
 /* ==============
  universal
  ============= */
@@ -71,13 +75,16 @@ back-project container */
 .back-project-container {
   margin-top: -3.5em;
   padding: 3.25em 0 2.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   position: relative;
 }
 
 .logo-mastercraft {
   position: absolute;
-  top: -1.9em;
-  left: 8em;
+  top: -10%;
 }
 
 h1 {
@@ -238,6 +245,7 @@ h2 {
 
 .out-of-stock-btn {
   background: var(--Dark-gray);
+  cursor: unset;
 }
 
 /* ==============
