@@ -356,6 +356,18 @@ radio
   cursor: pointer;
 }
 
+.radio:hover {
+  color: var(--Moderate-cyan);
+}
+
+.out-of-stock-radio:hover {
+  color: var(--Black);
+}
+
+.out-of-stock-radio {
+  cursor: unset;
+}
+
 .radio__input {
   display: none;
 }
@@ -396,7 +408,7 @@ modal
 }
 
 .modal-main {
-  display: none;
+  /* display: none; */
 }
 
 .modal-header {
@@ -422,10 +434,6 @@ modal
   font-size: 1.125em;
 }
 
-.out-of-stock-radio {
-  cursor: unset;
-}
-
 .edition-container-pledge {
   padding: 1.5em 0;
 }
@@ -437,7 +445,7 @@ modal
 .pledge-container {
   border-top: 1px solid var(--Border);
   padding-top: 1.5em;
-  display: none;
+  /* display: none; */
 }
 
 .pledge-header {
@@ -465,6 +473,10 @@ modal
   font-weight: 700;
   font-size: 0.875em;
   text-align: center;
+}
+
+.pledge-input:focus {
+  border-color: var(--Moderate-cyan);
 }
 
 .pledge-input-container::before {
@@ -504,7 +516,7 @@ modal complete
 =============*/
 
 .modal-complete {
-  display: none;
+  /* display: none; */
   margin-bottom: 0;
   padding-bottom: 0;
 }
