@@ -201,7 +201,7 @@ main-container
 .main-container {
   background: #fff;
   padding-top: 2.5em;
-  padding-bottom: 1.25em;
+  padding-bottom: 1.125em;
 }
 
 .main-paragraph {
@@ -314,7 +314,7 @@ modal
 =========== */
 
 .modal {
-  display: none;
+  /* display: none; */
   padding-bottom: 0.4375em;
   position: absolute;
   top: 18%;
@@ -331,6 +331,10 @@ modal
   cursor: pointer;
 }
 
+.modal-container {
+  position: relative;
+}
+
 .no-reward-header {
   margin: 0;
 }
@@ -342,6 +346,79 @@ modal
 
 .out-of-stock-radio {
   cursor: unset;
+}
+
+.edition-container-pledge {
+  padding: 1.5em 0;
+}
+
+.edition-container-pledge-main {
+  padding: 0 1.5em;
+}
+
+.pledge-container {
+  border-top: 1px solid var(--Border);
+  padding-top: 1.5em;
+  /* display: none; */
+}
+
+.pledge-header {
+  font-size: 0.875rem;
+  text-align: center;
+  padding-bottom: 1em;
+  color: var(--Dark-gray);
+}
+
+.pledge-input-container {
+  display: flex;
+  align-items: center;
+  width: 85%;
+  margin: 0 auto;
+}
+
+.pledge-input {
+  width: 80%;
+  padding: 1em 2em;
+  border-radius: 33.5px;
+  outline: none;
+  border: 1px solid var(--Border);
+  position: relative;
+  font: inherit;
+  font-weight: 700;
+  font-size: 0.875em;
+  text-align: center;
+}
+
+.pledge-input-container::before {
+  content: "£";
+  color: var(--Black);
+  opacity: 0.3;
+  font-size: 0.875rem;
+  font-weight: 500;
+  position: absolute;
+  width: 9px;
+  height: 17px;
+  z-index: 10;
+  left: 15%;
+}
+
+.pledge-btn {
+  font-weight: 500;
+  padding: 1em 2em;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.modal-edition-paragraph {
+  padding: 0 1.5em;
 }
 
 /* ============
