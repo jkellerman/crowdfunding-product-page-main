@@ -36,7 +36,7 @@ header {
   filter: contrast(130%);
 }
 
-.navbar-mobile {
+.navbar {
   padding-top: 2em;
   width: 85%;
   display: flex;
@@ -61,8 +61,7 @@ header {
 .icon-close-menu {
   display: none;
 }
-
-.hamburger .color-overlay {
+.color-overlay {
   width: 100%;
   height: 100%;
   background: linear-gradient(180deg, black 10%, rgba(128, 128, 128, 0.5) 90%);
@@ -72,9 +71,9 @@ header {
 }
 
 /* ==============
-mobile modal nav 
+ nav 
 ===============*/
-.nav-mobile {
+.nav-menu {
   display: none;
   top: 12.5%;
   width: 85%;
@@ -83,11 +82,15 @@ mobile modal nav
   z-index: 10000;
 }
 
-ul {
+.nav-menu-desktop {
+  display: none;
+}
+
+.ul-mobile {
   padding-left: 0;
 }
 
-li {
+.li-mobile {
   background: #fff;
   list-style: none;
   padding: 1.25em 1.25em;
@@ -110,6 +113,12 @@ a:hover {
 .about {
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
+  border-bottom: 0.5px solid var(--Border);
+  border: 0.5px solid var(--Border);
+}
+
+.discover {
+  border: 0.5px solid var(--Border);
 }
 
 .get-started {
@@ -149,6 +158,7 @@ h2,
 .btn:active,
 .btn:hover {
   background: var(--Dark-cyan);
+  transition: 0.2s ease-in-out;
 }
 
 .out-of-stock-btn:active,
@@ -160,14 +170,20 @@ h2,
   cursor: pointer;
 }
 
+.bookmark-box {
+  display: none;
+}
+
 circle:hover,
 circle:active {
   fill: var(--Dark-cyan);
+  transition: 0.2s ease-in-out;
 }
 
 circle:hover ~ path,
 circle:active ~ path {
   fill: #ffffff;
+  transition: 0.2s ease-in-out;
 }
 
 /* ============
@@ -358,6 +374,7 @@ radio
 
 .radio:hover {
   color: var(--Moderate-cyan);
+  transition: 0.2s ease-in-out;
 }
 
 .out-of-stock-radio:hover {
@@ -408,7 +425,7 @@ modal
 }
 
 .modal-main {
-  /* display: none; */
+  display: none;
 }
 
 .modal-header {
@@ -562,4 +579,102 @@ footer
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 597px) {
+  /* ================
+navigation 
+==================*/
+  header {
+    background-image: url(images/image-hero-desktop.png);
+    background-repeat: no-repeat;
+    background-size: unset;
+    height: 400px;
+    background-size: cover;
+    filter: contrast(100%);
+  }
+
+  .navbar {
+    width: 77.5%;
+    padding-top: 3em;
+  }
+
+  .hamburger,
+  .icon-close-menu {
+    display: none !important;
+  }
+
+  .nav-menu-desktop {
+    display: block;
+    z-index: 4;
+    transform: translateX(1.45em);
+  }
+
+  .ul-desktop {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .li-desktop {
+    padding-left: 2em;
+    color: #ffffff;
+  }
+
+  a:hover {
+    color: #ffffff;
+  }
+
+  .color-overlay {
+    background: linear-gradient(
+      180deg,
+      black 20%,
+      rgba(128, 128, 128, 0.5) 90%
+    );
+  }
+
+  /* ============
+  main
+  ============== */
+
+  main {
+    width: 730px;
+    margin: 0 auto;
+    max-width: 98%;
+  }
+
+  .subheading {
+    margin-bottom: 0;
+  }
+
+  .cta-container {
+    justify-content: space-between;
+    margin: 2.5em 3em 0;
+  }
+
+  .bookmark {
+    width: 174px;
+    height: 56px;
+    z-index: 5;
+    position: relative;
+    display: flex;
+  }
+
+  .bookmark-box {
+    display: block;
+    width: 174px;
+    height: 56px;
+    background: var(--Snow);
+    position: absolute;
+    border-radius: 33.5px;
+    border: none;
+    outline: none;
+    top: -1.5%;
+    left: 0;
+    z-index: -1;
+    padding-left: 3em;
+    font-weight: 700;
+    cursor: pointer;
+    color: var(--Dark-gray);
+  }
 }

@@ -20,7 +20,7 @@
   </head>
   <body>
     <header>
-      <div class="navbar-mobile">
+      <div class="navbar">
         <div class="logo"><img src="images/logo.svg" alt="logo" /></div>
         <div class="hamburger-menu">
           <img
@@ -34,19 +34,32 @@
             alt="icon-close-menu"
           />
         </div>
+        <div class="nav-menu-desktop">
+          <nav>
+            <ul class="ul-desktop">
+              <a href=""><li class="li-desktop">About</li></a>
+              <a href=""><li class="li-desktop">Discover</li></a>
+              <a href=""><li class="li-desktop">Get Started</li></a>
+            </ul>
+          </nav>
+        </div>
       </div>
       <div class="color-overlay"></div>
     </header>
 
-    <div class="nav-mobile">
+    <!-- nav-menu mobile -->
+
+    <div class="nav-menu">
       <nav>
-        <ul>
-          <a href=""><li class="about">About</li></a>
-          <a href=""><li>Discover</li></a>
-          <a href=""><li class="get-started">Get Started</li></a>
+        <ul class="ul-mobile">
+          <a href=""><li class="li-mobile about">About</li></a>
+          <a href=""><li class="li-mobile discover">Discover</li></a>
+          <a href=""><li class="li-mobile get-started">Get Started</li></a>
         </ul>
       </nav>
     </div>
+
+    <!-- nav-menu mobile -->
 
     <!-- back project section -->
     <main>
@@ -69,6 +82,7 @@
                 <path fill="#B1B1B1" d="M23 19v18l5-5.058L33 37V19z" />
               </g>
             </svg>
+            <button type="button" class="bookmark-box">Bookmark</button>
           </div>
         </div>
       </section>
