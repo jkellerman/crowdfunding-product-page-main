@@ -92,6 +92,19 @@ li {
   list-style: none;
   padding: 1.25em 1.25em;
   font-size: 1.125rem;
+  color: black;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 .about {
@@ -131,6 +144,16 @@ h2,
   border-radius: 33.5px;
   color: #fff;
   cursor: pointer;
+}
+
+.btn:active,
+.btn:hover {
+  background: var(--Dark-cyan);
+}
+
+.out-of-stock-btn:active,
+.out-of-stock-btn:hover {
+  background: var(--Dark-gray);
 }
 
 .bookmark {

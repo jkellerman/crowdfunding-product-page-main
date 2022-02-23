@@ -41,9 +41,9 @@
     <div class="nav-mobile">
       <nav>
         <ul>
-          <li class="about">About</li>
-          <li>Discover</li>
-          <li class="get-started">Get Started</li>
+          <a href=""><li class="about">About</li></a>
+          <a href=""><li>Discover</li></a>
+          <a href=""><li class="get-started">Get Started</li></a>
         </ul>
       </nav>
     </div>
@@ -387,9 +387,16 @@
             <div class="pledge-header">Enter your pledge</div>
             <div class="pledge-input-container">
               <label for="pledge-input">
-                <input class="pledge-input" type="number" id="pledge-input" />
+                <input
+                  class="pledge-input"
+                  type="number"
+                  id="pledge-input"
+                  disabled
+                />
               </label>
-              <button class="pledge-btn btn" type="button">Continue</button>
+              <button class="pledge-btn btn out-of-stock-btn" type="button">
+                Continue
+              </button>
             </div>
           </div>
         </div>
