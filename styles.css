@@ -160,6 +160,11 @@ h2,
   cursor: pointer;
 }
 
+circle:hover,
+circle:active {
+  fill: var(--Dark-cyan);
+}
+
 /* ============
 back-project container */
 
