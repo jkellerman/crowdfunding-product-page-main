@@ -476,7 +476,7 @@ modal
 .pledge-container {
   border-top: 1px solid var(--Border);
   padding-top: 1.5em;
-  /* display: none; */
+  display: none;
 }
 
 .pledge-header {
@@ -543,7 +543,7 @@ modal complete
 =============*/
 
 .modal-complete {
-  display: none;
+  /* display: none; */
   margin-bottom: 0;
   padding-bottom: 0;
 }
@@ -817,5 +817,25 @@ navigation
 
   .edition-container {
     padding-bottom: 1em;
+  }
+
+  .modal-complete {
+    transform: translateY(75%);
+    width: 540px;
+    height: 444px;
+  }
+
+  .modal-complete-container {
+    width: 540px;
+    height: 444px;
+    gap: 1em;
+  }
+
+  .modal-complete-icon-container {
+    margin-bottom: 1.5em;
+  }
+
+  .modal-complete-main-paragraph {
+    width: 70%;
   }
 }
