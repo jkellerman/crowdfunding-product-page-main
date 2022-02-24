@@ -507,11 +507,11 @@ modal
   opacity: 0.3;
   font-size: 0.875rem;
   font-weight: 500;
-  position: absolute;
+  position: relative;
   width: 9px;
   height: 17px;
   z-index: 10;
-  left: 15%;
+  left: 12.5%;
 }
 
 .pledge-btn {
@@ -741,5 +741,49 @@ navigation
     top: unset;
     left: unset;
     width: 100%;
+  }
+
+  .edition-paragraph {
+    width: 95%;
+    transform: translateX(3em);
+    font-size: 0.9375rem;
+    padding-right: 1em;
+  }
+
+  .modal-edition-footer-container {
+    position: absolute;
+    top: 8%;
+    right: 5%;
+  }
+
+  .modal-edition-container {
+    display: flex;
+  }
+
+  .modal-edition-container-subheading {
+    margin-left: 1em;
+  }
+
+  .pledge-header {
+    padding: 0;
+    min-width: 200px;
+    text-align: start;
+  }
+
+  .pledge-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 1.5em 0;
+    align-items: center;
+  }
+
+  .pledge-input-container {
+    text-align: end;
+    justify-content: flex-end;
+    gap: 1em;
+  }
+
+  .pledge-input {
+    width: 100px;
   }
 }
