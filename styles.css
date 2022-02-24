@@ -426,7 +426,11 @@ modal
 }
 
 .modal-main {
-  display: none;
+  /* display: none; */
+  z-index: 10000;
+  background: #fff;
+  padding-top: 2.5em;
+  padding-bottom: 1.125em;
 }
 
 .modal-header {
@@ -644,6 +648,13 @@ navigation
     max-width: 98%;
   }
 
+  .back-project-container,
+  .tracker-progress-container,
+  .main-container {
+    width: 730px;
+    max-width: 100%;
+  }
+
   .subheading {
     margin-bottom: 0;
   }
@@ -656,7 +667,7 @@ navigation
   .bookmark {
     width: 174px;
     height: 56px;
-    z-index: 5;
+    z-index: 2;
     position: relative;
     display: flex;
   }
@@ -685,7 +696,7 @@ navigation
 
   .tracker-container {
     flex-direction: row;
-    gap: 2.5em;
+    gap: 3.5em;
     width: 85%;
     margin: 0 auto;
     justify-content: flex-start;
@@ -694,8 +705,8 @@ navigation
   .total-container {
     text-align: start;
     margin: 2em 0;
-    padding-left: 2.49em;
-    padding-right: 2em;
+    padding-left: 2.56em;
+    padding-right: 3em;
     border-left: 1px solid var(--Border);
   }
 
@@ -711,5 +722,24 @@ navigation
 
   .line {
     display: none;
+  }
+
+  /* ==========
+  modal main
+  =========== */
+
+  .modal-main-container {
+    position: absolute;
+    width: 730px;
+    top: 22.5%;
+    max-width: 98%;
+    z-index: 100;
+  }
+
+  .modal {
+    position: unset;
+    top: unset;
+    left: unset;
+    width: 100%;
   }
 }
