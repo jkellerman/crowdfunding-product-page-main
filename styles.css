@@ -474,9 +474,9 @@ modal
 }
 
 .pledge-container {
+  /* display: none; */
   border-top: 1px solid var(--Border);
   padding-top: 1.5em;
-  display: none;
 }
 
 .pledge-header {
@@ -543,7 +543,7 @@ modal complete
 =============*/
 
 .modal-complete {
-  /* display: none; */
+  display: none;
   margin-bottom: 0;
   padding-bottom: 0;
 }
