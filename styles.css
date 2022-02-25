@@ -32,26 +32,32 @@ header {
   background-position-y: 50%;
   background-size: 600px 400px;
   height: 300px;
-  position: relative;
   filter: contrast(130%);
 }
 
-.navbar {
+/* .nav-container {
   padding-top: 2em;
   width: 85%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
-}
+} */
 
-.logo {
-  z-index: 4;
+.navbar {
+  position: absolute;
+  z-index: 10;
+  width: 85%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 3.5%;
+  left: 7%;
 }
 
 .hamburger-menu {
   cursor: pointer;
-  z-index: 4;
 }
 
 .hamburger {
@@ -61,7 +67,7 @@ header {
 .icon-close-menu {
   display: none;
 }
-.color-overlay {
+.colour-overlay {
   width: 100%;
   height: 100%;
   background: linear-gradient(180deg, black 10%, rgba(128, 128, 128, 0.5) 90%);
@@ -79,7 +85,7 @@ header {
   width: 85%;
   left: 7.5%;
   position: absolute;
-  z-index: 10000;
+  z-index: 10;
 }
 
 .nav-menu-desktop {
@@ -418,6 +424,19 @@ radio
 modal
 =========== */
 
+main {
+  position: relative;
+}
+
+.background-dim {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, black 50%, white);
+  opacity: 0.5;
+  position: absolute;
+  top: -50%;
+}
+
 .modal {
   padding-bottom: 0.4375em;
   position: absolute;
@@ -427,7 +446,7 @@ modal
 
 .modal-main {
   display: none;
-  z-index: 10000;
+  z-index: 10;
   background: #fff;
   padding-top: 2.5em;
   padding-bottom: 1.125em;
@@ -604,20 +623,19 @@ navigation
     filter: contrast(100%);
   }
 
-  .navbar {
-    width: 77.5%;
-    padding-top: 3em;
-  }
-
-  .hamburger,
-  .icon-close-menu {
+  .navbar,
+  .nav-menu {
     display: none !important;
   }
 
   .nav-menu-desktop {
-    display: block;
-    z-index: 4;
-    transform: translateX(1.45em);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transform: translate(14%, 75%);
+    width: 80%;
+    z-index: 10;
+    position: absolute;
   }
 
   .ul-desktop {
@@ -738,7 +756,7 @@ navigation
     width: 730px;
     top: 22.5%;
     max-width: 98%;
-    z-index: 100;
+    z-index: 10;
   }
 
   .modal {
