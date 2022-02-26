@@ -126,7 +126,6 @@ a:hover {
 /* ==============
  universal
  ============= */
-
 .modal,
 .container {
   width: 85%;
@@ -442,7 +441,7 @@ main {
 
 .modal {
   padding-bottom: 0.4375em;
-  /* position: absolute; */
+  position: absolute;
   top: 18%;
   left: 7.5%;
 }
@@ -453,9 +452,12 @@ main {
   background: #fff;
   padding-top: 2em;
   padding-bottom: 1.125em;
-  top: 18%;
+  top: -45%;
+  left: 0;
   position: absolute;
-  width: 85%;
+  width: 100%;
+  border-radius: 8px;
+  margin: 0 auto;
 }
 
 .modal-header {
@@ -499,7 +501,7 @@ main {
 }
 
 .pledge-container {
-  display: block;
+  display: none;
 }
 
 .pledge-flex-container {
@@ -760,19 +762,10 @@ navigation
   modal main
   =========== */
 
-  .modal-main-container {
+  .modal-main {
     position: absolute;
-    width: 730px;
-    top: 22.5%;
-    max-width: 98%;
-    z-index: 10;
-  }
-
-  .modal {
-    position: unset;
-    top: unset;
-    left: unset;
     width: 100%;
+    margin: 0 auto;
   }
 
   .edition-paragraph {
