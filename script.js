@@ -14,6 +14,7 @@ const bookmarkText = document.querySelector(".bookmark-box");
 const bookmarkLogo = document.querySelector(".bookmark-logo");
 const bambooButton = document.querySelectorAll(".select-reward-btn")[0];
 const blackEditionButton = document.querySelectorAll(".select-reward-btn")[1];
+const radioInputs = document.querySelectorAll(".radio__input");
 
 // Mobile navigation
 
@@ -37,6 +38,10 @@ backProjectBtn.addEventListener("click", () => {
   mainModalPopup();
   modalMain.style.top = "-45%";
   navBar.classList.add("dim-nav");
+  //   remove checked incase user clicks select reward, goes back to main screen and then clicks back project
+  radioInputs.forEach((radio) => {
+    radio.checked = false;
+  });
 });
 
 backProjectCloseBtn.addEventListener("click", () => {
@@ -79,9 +84,28 @@ bookmarkLogo.addEventListener("click", () => {
   }
 });
 
+// select reward click events
+
 bambooButton.addEventListener("click", () => {
   mainModalPopup();
   modalMain.style.top = "275%";
+  const radioButton = document.querySelector("#radio-bamboo-stand");
+  radioButton.checked = true;
+});
+
+blackEditionButton.addEventListener("click", () => {
+  mainModalPopup();
+  modalMain.style.top = "300%";
+  const radioButton = document.querySelector("#radio-black-edition-stand");
+  radioButton.checked = true;
+});
+
+// When radio button is selected, display pledge container
+
+radioInputs.forEach((radio) => {
+  radio.addEventListener("click", () => {
+    console.log(radio.parentElement);
+  });
 });
 
 function mainModalPopup() {
