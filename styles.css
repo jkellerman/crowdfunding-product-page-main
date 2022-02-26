@@ -169,16 +169,6 @@ h2 {
   display: none;
 }
 
-circle:active {
-  fill: var(--Dark-cyan);
-  transition: 0.2s ease-in-out;
-}
-
-circle:active ~ path {
-  fill: #ffffff;
-  transition: 0.2s ease-in-out;
-}
-
 /* ============
 back-project container */
 
@@ -423,6 +413,7 @@ modal
   position: fixed;
   background: rgba(0, 0, 0, 0.5);
   top: 0;
+  z-index: 3;
 }
 
 .bg-modal-nav {
@@ -729,16 +720,6 @@ navigation
     cursor: pointer;
     color: var(--Dark-gray);
   }
-
-  /* circle:active {
-    fill: var(--Dark-cyan);
-    transition: 0.2s ease-in-out;
-  } */
-
-  /* circle:active ~ path {
-    fill: #ffffff;
-    transition: 0.2s ease-in-out;
-  } */
 
   /* ==============
   tracker container

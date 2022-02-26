@@ -12,6 +12,8 @@ const bookmarkCircle = document.querySelector(".bookmark-circle");
 const bookmarkPath = document.querySelector(".bookmark-path");
 const bookmarkText = document.querySelector(".bookmark-box");
 const bookmarkLogo = document.querySelector(".bookmark-logo");
+const bambooButton = document.querySelectorAll(".select-reward-btn")[0];
+const blackEditionButton = document.querySelectorAll(".select-reward-btn")[1];
 
 // Mobile navigation
 
@@ -32,9 +34,9 @@ iconCloseMenu.addEventListener("click", () => {
 // back project event listener
 
 backProjectBtn.addEventListener("click", () => {
-  modalMain.style.display = "block";
+  mainModalPopup();
+  modalMain.style.top = "-45%";
   navBar.classList.add("dim-nav");
-  background.style.display = "block";
 });
 
 backProjectCloseBtn.addEventListener("click", () => {
@@ -76,3 +78,13 @@ bookmarkLogo.addEventListener("click", () => {
     bookmarkPath.style.fill = null;
   }
 });
+
+bambooButton.addEventListener("click", () => {
+  mainModalPopup();
+  modalMain.style.top = "275%";
+});
+
+function mainModalPopup() {
+  modalMain.style.display = "block";
+  background.style.display = "block";
+}
