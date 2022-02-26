@@ -13,6 +13,7 @@
   --Snow: hsl(0, 0%, 98%);
   --progress-background: hsl(30, 23%, 95%);
   --nobel: hsl(0, 0%, 59%);
+  --bookmark-background: hsl(176, 72%, 95%);
 }
 
 body {
@@ -160,7 +161,7 @@ h2 {
   background: var(--Dark-gray);
 }
 
-.bookmark {
+.bookmark-logo {
   cursor: pointer;
 }
 
@@ -711,7 +712,6 @@ navigation
     position: relative;
     display: flex;
   }
-
   .bookmark-box {
     display: block;
     width: 174px;
@@ -729,6 +729,16 @@ navigation
     cursor: pointer;
     color: var(--Dark-gray);
   }
+
+  /* circle:active {
+    fill: var(--Dark-cyan);
+    transition: 0.2s ease-in-out;
+  } */
+
+  /* circle:active ~ path {
+    fill: #ffffff;
+    transition: 0.2s ease-in-out;
+  } */
 
   /* ==============
   tracker container
