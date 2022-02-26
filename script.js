@@ -1,5 +1,6 @@
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
+const navBar = document.querySelector(".navbar");
 const iconCloseMenu = document.querySelector(".icon-close-menu");
 const background = document.querySelector(".bg-modal");
 const backgroundNav = document.querySelector(".bg-modal-nav");
@@ -27,12 +28,12 @@ iconCloseMenu.addEventListener("click", (e) => {
 
 backProjectBtn.addEventListener("click", (e) => {
   modalMain.style.display = "block";
-  hamburger.classList.add("dim-nav");
+  navBar.classList.add("dim-nav");
   background.style.display = "block";
 });
 
 backProjectCloseBtn.addEventListener("click", (e) => {
   modalMain.style.display = "none";
-  hamburger.classList.remove("dim-nav");
+  navBar.classList.remove("dim-nav");
   background.style.display = "none";
 });

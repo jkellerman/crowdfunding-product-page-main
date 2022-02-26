@@ -168,13 +168,11 @@ h2 {
   display: none;
 }
 
-circle:hover,
 circle:active {
   fill: var(--Dark-cyan);
   transition: 0.2s ease-in-out;
 }
 
-circle:hover ~ path,
 circle:active ~ path {
   fill: #ffffff;
   transition: 0.2s ease-in-out;
