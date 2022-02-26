@@ -126,7 +126,7 @@ a:hover {
 /* ==============
  universal
  ============= */
-.modal,
+
 .container {
   width: 85%;
   margin: 0 auto 1.5em;
@@ -135,9 +135,7 @@ a:hover {
   padding-bottom: 2.5em;
 }
 
-.modal-header span,
-h2,
-.modal-complete-header {
+h2 {
   font-size: 1.125rem;
   font-weight: 700;
 }
@@ -414,8 +412,22 @@ radio
 modal
 =========== */
 
-main {
+/* main {
   position: relative;
+} */
+
+.bg-modal,
+.bg-modal-nav {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  top: 0;
+}
+
+.bg-modal-nav {
+  background: linear-gradient(180deg, black 10%, rgba(128, 128, 128, 0.5) 90%);
 }
 
 .dim-nav {
@@ -424,26 +436,22 @@ main {
   cursor: unset;
 }
 
-.background {
-  width: 100%;
-  height: 300%;
-  background: linear-gradient(180deg, black 50%, white);
-  opacity: 0.5;
-  position: absolute;
-  top: -20%;
-}
-
-/* .background-dim {
-  position: absolute;
-  background: black;
-  top: 0;
-} */
-
 .modal {
+  width: 85%;
+  margin: 0 auto 1.5em;
+  background: #ffffff;
+  border-radius: 8px;
+  padding-bottom: 2.5em;
   padding-bottom: 0.4375em;
   position: absolute;
   top: 18%;
   left: 7.5%;
+}
+
+.modal-header span,
+.modal-complete-header {
+  font-size: 1.125rem;
+  font-weight: 700;
 }
 
 .modal-main {
@@ -786,7 +794,7 @@ navigation
 
   .modal-edition-footer-container {
     position: absolute;
-    top: 12%;
+    top: 16%;
     right: 4%;
   }
 
