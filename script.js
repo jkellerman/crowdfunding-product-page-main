@@ -17,6 +17,7 @@ const blackEditionButton = document.querySelectorAll(".select-reward-btn")[1];
 const radioInputs = document.querySelectorAll(".radio__input");
 const pledgeContainers = document.querySelectorAll(".pledge-container");
 const containers = document.querySelectorAll(".modal-container");
+const pledgeInputs = document.querySelectorAll(".pledge-input");
 
 // Mobile navigation
 
@@ -39,6 +40,7 @@ iconCloseMenu.addEventListener("click", () => {
 backProjectBtn.addEventListener("click", () => {
   mainModalPopup();
   removeBorderColor();
+  clearPledgeInputs();
   modalMain.style.top = "-45%";
   navBar.classList.add("dim-nav");
   //   remove checked incase user clicks select reward, goes back to main screen and then clicks back project
@@ -71,6 +73,7 @@ bambooButton.addEventListener("click", () => {
   mainModalPopup();
   removePledgeContainer();
   removeBorderColor();
+  clearPledgeInputs();
   modalMain.style.top = "275%";
   const radioButton = document.querySelector("#radio-bamboo-stand");
   const radioPledge =
@@ -86,6 +89,7 @@ blackEditionButton.addEventListener("click", () => {
   mainModalPopup();
   removePledgeContainer();
   removeBorderColor();
+  clearPledgeInputs();
   modalMain.style.top = "300%";
   const radioButton = document.querySelector("#radio-black-edition-stand");
   const radioPledge =
@@ -106,6 +110,7 @@ radioInputs.forEach((radio) => {
     if (radio.checked === true) {
       removePledgeContainer();
       removeBorderColor();
+      clearPledgeInputs();
       pledgeContainer.style.display = "block";
       const editionContainer = radio.parentElement.parentElement.parentElement;
       editionContainer.style.border = " 2px solid var(--Moderate-cyan)";
@@ -145,5 +150,11 @@ function bookmark() {
 function removeBorderColor() {
   containers.forEach((container) => {
     container.style.border = null;
+  });
+}
+
+function clearPledgeInputs() {
+  pledgeInputs.forEach((input) => {
+    input.value = "";
   });
 }
