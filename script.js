@@ -16,6 +16,7 @@ const bambooButton = document.querySelectorAll(".select-reward-btn")[0];
 const blackEditionButton = document.querySelectorAll(".select-reward-btn")[1];
 const radioInputs = document.querySelectorAll(".radio__input");
 const pledgeContainers = document.querySelectorAll(".pledge-container");
+const containers = document.querySelectorAll(".modal-container");
 
 // Mobile navigation
 
@@ -33,10 +34,11 @@ iconCloseMenu.addEventListener("click", () => {
   backgroundNav.style.display = "none";
 });
 
-// back project event listener
+// back project event listeners
 
 backProjectBtn.addEventListener("click", () => {
   mainModalPopup();
+  removeBorderColor();
   modalMain.style.top = "-45%";
   navBar.classList.add("dim-nav");
   //   remove checked incase user clicks select reward, goes back to main screen and then clicks back project
@@ -68,23 +70,31 @@ bookmarkLogo.addEventListener("click", () => {
 bambooButton.addEventListener("click", () => {
   mainModalPopup();
   removePledgeContainer();
+  removeBorderColor();
   modalMain.style.top = "275%";
   const radioButton = document.querySelector("#radio-bamboo-stand");
-  radioButton.checked = true;
   const radioPledge =
     radioButton.parentElement.parentElement.nextElementSibling;
+  const editionContainer =
+    radioButton.parentElement.parentElement.parentElement;
+  radioButton.checked = true;
   radioPledge.style.display = "block";
+  editionContainer.style.border = " 2px solid var(--Moderate-cyan)";
 });
 
 blackEditionButton.addEventListener("click", () => {
   mainModalPopup();
   removePledgeContainer();
+  removeBorderColor();
   modalMain.style.top = "300%";
   const radioButton = document.querySelector("#radio-black-edition-stand");
-  radioButton.checked = true;
   const radioPledge =
     radioButton.parentElement.parentElement.nextElementSibling;
+  const editionContainer =
+    radioButton.parentElement.parentElement.parentElement;
+  radioButton.checked = true;
   radioPledge.style.display = "block";
+  editionContainer.style.border = " 2px solid var(--Moderate-cyan)";
 });
 
 // When radio button is selected, display pledge container
@@ -95,10 +105,15 @@ radioInputs.forEach((radio) => {
       radio.parentElement.parentElement.nextElementSibling;
     if (radio.checked === true) {
       removePledgeContainer();
+      removeBorderColor();
       pledgeContainer.style.display = "block";
+      const editionContainer = radio.parentElement.parentElement.parentElement;
+      editionContainer.style.border = " 2px solid var(--Moderate-cyan)";
     }
   });
 });
+
+// functions
 
 function mainModalPopup() {
   modalMain.style.display = "block";
@@ -125,4 +140,10 @@ function bookmark() {
     bookmarkCircle.style.fill = null;
     bookmarkPath.style.fill = null;
   }
+}
+
+function removeBorderColor() {
+  containers.forEach((container) => {
+    container.style.border = null;
+  });
 }
