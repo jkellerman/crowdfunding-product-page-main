@@ -15,6 +15,7 @@ const bookmarkLogo = document.querySelector(".bookmark-logo");
 const bambooButton = document.querySelectorAll(".select-reward-btn")[0];
 const blackEditionButton = document.querySelectorAll(".select-reward-btn")[1];
 const radioInputs = document.querySelectorAll(".radio__input");
+const pledgeContainers = document.querySelectorAll(".pledge-container");
 
 // Mobile navigation
 
@@ -42,6 +43,8 @@ backProjectBtn.addEventListener("click", () => {
   radioInputs.forEach((radio) => {
     radio.checked = false;
   });
+
+  removePledgeContainer();
 });
 
 backProjectCloseBtn.addEventListener("click", () => {
@@ -88,27 +91,46 @@ bookmarkLogo.addEventListener("click", () => {
 
 bambooButton.addEventListener("click", () => {
   mainModalPopup();
+  removePledgeContainer();
   modalMain.style.top = "275%";
   const radioButton = document.querySelector("#radio-bamboo-stand");
   radioButton.checked = true;
+  const radioPledge =
+    radioButton.parentElement.parentElement.nextElementSibling;
+  radioPledge.style.display = "block";
 });
 
 blackEditionButton.addEventListener("click", () => {
   mainModalPopup();
+  removePledgeContainer();
   modalMain.style.top = "300%";
   const radioButton = document.querySelector("#radio-black-edition-stand");
   radioButton.checked = true;
+  const radioPledge =
+    radioButton.parentElement.parentElement.nextElementSibling;
+  radioPledge.style.display = "block";
 });
 
 // When radio button is selected, display pledge container
 
 radioInputs.forEach((radio) => {
   radio.addEventListener("click", () => {
-    console.log(radio.parentElement);
+    const pledgeContainer =
+      radio.parentElement.parentElement.nextElementSibling;
+    if (radio.checked === true) {
+      removePledgeContainer();
+      pledgeContainer.style.display = "block";
+    }
   });
 });
 
 function mainModalPopup() {
   modalMain.style.display = "block";
   background.style.display = "block";
+}
+
+function removePledgeContainer() {
+  pledgeContainers.forEach((pledge) => {
+    pledge.style.display = "none";
+  });
 }

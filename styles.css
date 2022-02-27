@@ -445,7 +445,7 @@ modal
 }
 
 .modal-main {
-  /* display: none; */
+  display: none;
   z-index: 10;
   background: #fff;
   padding-top: 2em;
