@@ -56,35 +56,11 @@ backProjectCloseBtn.addEventListener("click", () => {
 // bookmark event listener
 
 bookmarkBox.addEventListener("click", () => {
-  if (bookmarkBox.innerText === "Bookmark") {
-    bookmarkText.innerText = "Bookmarked";
-    bookmarkText.style.color = "var(--Dark-cyan)";
-    bookmarkBox.style.background = "var(--bookmark-background)";
-    bookmarkCircle.style.fill = "var(--Dark-cyan)";
-    bookmarkPath.style.fill = "#FFF";
-  } else {
-    bookmarkText.innerText = "Bookmark";
-    bookmarkText.style.color = null;
-    bookmarkBox.style.background = null;
-    bookmarkCircle.style.fill = null;
-    bookmarkPath.style.fill = null;
-  }
+  bookmark();
 });
 
 bookmarkLogo.addEventListener("click", () => {
-  if (bookmarkBox.innerText === "Bookmark") {
-    bookmarkText.innerText = "Bookmarked";
-    bookmarkText.style.color = "var(--Dark-cyan)";
-    bookmarkBox.style.background = "var(--bookmark-background)";
-    bookmarkCircle.style.fill = "var(--Dark-cyan)";
-    bookmarkPath.style.fill = "#FFF";
-  } else {
-    bookmarkText.innerText = "Bookmark";
-    bookmarkText.style.color = null;
-    bookmarkBox.style.background = null;
-    bookmarkCircle.style.fill = null;
-    bookmarkPath.style.fill = null;
-  }
+  bookmark();
 });
 
 // select reward click events
@@ -133,4 +109,20 @@ function removePledgeContainer() {
   pledgeContainers.forEach((pledge) => {
     pledge.style.display = "none";
   });
+}
+
+function bookmark() {
+  if (bookmarkBox.innerText === "Bookmark") {
+    bookmarkText.innerText = "Bookmarked";
+    bookmarkText.style.color = "var(--Dark-cyan)";
+    bookmarkBox.style.background = "var(--bookmark-background)";
+    bookmarkCircle.style.fill = "var(--Dark-cyan)";
+    bookmarkPath.style.fill = "#FFF";
+  } else {
+    bookmarkText.innerText = "Bookmark";
+    bookmarkText.style.color = null;
+    bookmarkBox.style.background = null;
+    bookmarkCircle.style.fill = null;
+    bookmarkPath.style.fill = null;
+  }
 }
