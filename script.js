@@ -20,6 +20,7 @@ const containers = document.querySelectorAll(".modal-container");
 const pledgeInputs = document.querySelectorAll(".pledge-input");
 const pledgeBtns = document.querySelectorAll(".pledge-btn");
 const totalBacked = document.querySelector(".total-amount");
+const totalBackers = document.querySelector(".backers-amount");
 
 // Mobile navigation
 
@@ -130,6 +131,7 @@ pledgeBtns[0].addEventListener("click", () => {
   charLimit(input);
   if (!isNaN(input)) {
     newTotalBacked(input);
+    newTotalBackers();
   }
 });
 
@@ -141,6 +143,7 @@ pledgeBtns[1].addEventListener("click", () => {
   charLimit(input);
   if (!isNaN(input) && input >= 25) {
     newTotalBacked(input);
+    newTotalBackers();
   }
 });
 
@@ -152,6 +155,7 @@ pledgeBtns[2].addEventListener("click", () => {
   charLimit(input);
   if (!isNaN(input) && input >= 75) {
     newTotalBacked(input);
+    newTotalBackers();
   }
 });
 
@@ -197,7 +201,7 @@ function clearPledgeInputs() {
 }
 
 function newTotalBacked(input) {
-  const totalBacked = document.querySelector(".total-amount");
+  // const totalBacked = document.querySelector(".total-amount");
   const totalBackedValue = totalBacked.innerText;
   const removeSign = totalBackedValue.replace(/\£/g, "");
   const totalNum = removeSign.replace(/\,/g, "");
@@ -211,4 +215,11 @@ function charLimit(input) {
   if (input.length > max_chars) {
     input = input.substring(0, max_chars);
   }
+}
+
+function newTotalBackers() {
+  const totalBackersValue = totalBackers.innerText;
+  const totalNum = totalBackersValue.replace(/\,/g, "");
+  const newTotal = parseInt(totalNum) + 1;
+  totalBackers.innerText = `${newTotal.toLocaleString()}`;
 }
