@@ -21,6 +21,11 @@ const pledgeInputs = document.querySelectorAll(".pledge-input");
 const pledgeBtns = document.querySelectorAll(".pledge-btn");
 const totalBacked = document.querySelector(".total-amount");
 const totalBackers = document.querySelector(".backers-amount");
+const progressBar = document.querySelector(".progress-bar");
+const progressing = document.querySelector(".progressing");
+
+console.log(progressBar);
+console.log(progressing);
 
 // Mobile navigation
 
@@ -132,6 +137,7 @@ pledgeBtns[0].addEventListener("click", () => {
   if (!isNaN(input)) {
     newTotalBacked(input);
     newTotalBackers();
+    updateProgressBar();
   }
 });
 
@@ -152,6 +158,7 @@ pledgeBtns[1].addEventListener("click", () => {
     );
 
     decreaseAmountLeft(bambooEditionModal, bambooEditionMain);
+    updateProgressBar();
   }
 });
 
@@ -169,6 +176,7 @@ pledgeBtns[2].addEventListener("click", () => {
     );
     let blackEditionMain = document.querySelector(".black-edition-amount-left");
     decreaseAmountLeft(blackEditionModal, blackEditionMain);
+    updateProgressBar();
   }
 });
 
@@ -243,4 +251,12 @@ function decreaseAmountLeft(edition, edition2) {
   const newTotal = totalNum - 1;
   edition.innerText = newTotal;
   edition2.innerText = newTotal;
+}
+
+function updateProgressBar() {
+  const newTotalBacked = document.querySelector(".total-amount").innerText;
+  const removeSign = newTotalBacked.replace(/\£/g, "");
+  const totalNum = removeSign.replace(/\,/g, "");
+  const percentage = (parseInt(totalNum) / 100000) * 100;
+  progressing.style.width = `${percentage}%`;
 }
