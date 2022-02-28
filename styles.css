@@ -103,6 +103,10 @@ header {
   color: black;
 }
 
+a {
+  color: black;
+}
+
 a:link {
   text-decoration: none;
 }
@@ -664,6 +668,10 @@ navigation
 
   .li-desktop {
     padding-left: 2em;
+    color: #ffffff;
+  }
+
+  a {
     color: #ffffff;
   }
 
