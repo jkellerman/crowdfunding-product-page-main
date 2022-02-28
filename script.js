@@ -18,6 +18,8 @@ const radioInputs = document.querySelectorAll(".radio__input");
 const pledgeContainers = document.querySelectorAll(".pledge-container");
 const containers = document.querySelectorAll(".modal-container");
 const pledgeInputs = document.querySelectorAll(".pledge-input");
+const pledgeBtns = document.querySelectorAll(".pledge-btn");
+const totalBacked = document.querySelector(".total-amount");
 
 // Mobile navigation
 
@@ -35,7 +37,7 @@ iconCloseMenu.addEventListener("click", () => {
   backgroundNav.style.display = "none";
 });
 
-// back project event listeners
+// Back project event listeners
 
 backProjectBtn.addEventListener("click", () => {
   mainModalPopup();
@@ -57,7 +59,7 @@ backProjectCloseBtn.addEventListener("click", () => {
   background.style.display = "none";
 });
 
-// bookmark event listener
+// Bookmark event listener
 
 bookmarkBox.addEventListener("click", () => {
   bookmark();
@@ -67,7 +69,7 @@ bookmarkLogo.addEventListener("click", () => {
   bookmark();
 });
 
-// select reward click events
+// Select reward click events
 
 bambooButton.addEventListener("click", () => {
   mainModalPopup();
@@ -118,7 +120,42 @@ radioInputs.forEach((radio) => {
   });
 });
 
-// functions
+// Continue click events
+
+// no pledge
+
+pledgeBtns[0].addEventListener("click", () => {
+  const inputField = pledgeBtns[0].previousElementSibling.children[0];
+  const input = inputField.value;
+  charLimit(input);
+  if (!isNaN(input)) {
+    newTotalBacked(input);
+  }
+});
+
+// £25 minimum
+
+pledgeBtns[1].addEventListener("click", () => {
+  const inputField = pledgeBtns[1].previousElementSibling.children[0];
+  const input = inputField.value;
+  charLimit(input);
+  if (!isNaN(input) && input >= 25) {
+    newTotalBacked(input);
+  }
+});
+
+// £75 minimum
+
+pledgeBtns[2].addEventListener("click", () => {
+  const inputField = pledgeBtns[2].previousElementSibling.children[0];
+  const input = inputField.value;
+  charLimit(input);
+  if (!isNaN(input) && input >= 75) {
+    newTotalBacked(input);
+  }
+});
+
+// Functions
 
 function mainModalPopup() {
   modalMain.style.display = "block";
@@ -157,4 +194,21 @@ function clearPledgeInputs() {
   pledgeInputs.forEach((input) => {
     input.value = "";
   });
+}
+
+function newTotalBacked(input) {
+  const totalBacked = document.querySelector(".total-amount");
+  const totalBackedValue = totalBacked.innerText;
+  const removeSign = totalBackedValue.replace(/\£/g, "");
+  const totalNum = removeSign.replace(/\,/g, "");
+  const newTotal = parseFloat(totalNum) + parseFloat(input);
+  const roundedTotal = Math.round(newTotal);
+  totalBacked.innerText = `£${roundedTotal.toLocaleString()}`;
+}
+
+function charLimit(input) {
+  const max_chars = 8;
+  if (input.length > max_chars) {
+    input = input.substring(0, max_chars);
+  }
 }
