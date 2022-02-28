@@ -197,7 +197,7 @@ back-project container */
 h1 {
   font-size: 1.25rem;
   text-align: center;
-  width: 75%;
+  width: 60%;
   margin: 0 auto 1em;
 }
 
@@ -865,5 +865,11 @@ navigation
 
   .modal-complete-main-paragraph {
     width: 70%;
+  }
+}
+
+@media (max-width: 293px) {
+  .cta-btn {
+    font-size: 0.8rem;
   }
 }
