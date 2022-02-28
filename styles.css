@@ -39,7 +39,7 @@ header {
   height: 18.75em;
   filter: contrast(130%);
   position: relative;
-  z-index: -50;
+  z-index: -5;
 }
 
 .colour-overlay {
@@ -638,6 +638,7 @@ navigation
     height: 400px;
     background-size: cover;
     filter: contrast(100%);
+    z-index: 0;
   }
 
   .navbar,
