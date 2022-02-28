@@ -402,10 +402,6 @@ radio
 modal
 =========== */
 
-/* main {
-  position: relative;
-} */
-
 .bg-modal,
 .bg-modal-nav {
   display: none;
@@ -575,6 +571,10 @@ modal complete
   display: none;
   margin-bottom: 0;
   padding-bottom: 0;
+  z-index: 12;
+  position: absolute;
+  top: -45%;
+  margin: 0 auto;
 }
 
 .modal-complete-container {
@@ -838,9 +838,11 @@ navigation
   }
 
   .modal-complete {
-    transform: translateY(75%);
+    top: 40%;
     width: 540px;
     height: 444px;
+    margin: unset;
+    left: 13%;
   }
 
   .modal-complete-container {

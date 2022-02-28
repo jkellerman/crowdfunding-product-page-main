@@ -23,9 +23,8 @@ const totalBacked = document.querySelector(".total-amount");
 const totalBackers = document.querySelector(".backers-amount");
 const progressBar = document.querySelector(".progress-bar");
 const progressing = document.querySelector(".progressing");
-
-console.log(progressBar);
-console.log(progressing);
+const modalComplete = document.querySelector(".modal-complete");
+const gotIt = document.querySelector(".modal-complete-btn");
 
 // Mobile navigation
 
@@ -49,7 +48,7 @@ backProjectBtn.addEventListener("click", () => {
   mainModalPopup();
   removeBorderColor();
   clearPledgeInputs();
-  modalMain.style.top = "-45%";
+  scrollToModal(modalMain);
   navBar.classList.add("dim-nav");
   //   remove checked incase user clicks select reward, goes back to main screen and then clicks back project
   radioInputs.forEach((radio) => {
@@ -63,6 +62,14 @@ backProjectCloseBtn.addEventListener("click", () => {
   modalMain.style.display = "none";
   navBar.classList.remove("dim-nav");
   background.style.display = "none";
+});
+
+// close compete modal
+
+gotIt.addEventListener("click", () => {
+  modalComplete.style.display = "none";
+  background.style.display = "none";
+  navBar.classList.remove("dim-nav");
 });
 
 // Bookmark event listener
@@ -82,7 +89,7 @@ bambooButton.addEventListener("click", () => {
   removePledgeContainer();
   removeBorderColor();
   clearPledgeInputs();
-  modalMain.style.top = "275%";
+  scrollToModal(modalMain);
   const radioButton = document.querySelector("#radio-bamboo-stand");
   const radioPledge =
     radioButton.parentElement.parentElement.nextElementSibling;
@@ -91,6 +98,7 @@ bambooButton.addEventListener("click", () => {
   radioButton.checked = true;
   radioPledge.style.display = "block";
   editionContainer.style.border = " 2px solid var(--Moderate-cyan)";
+  navBar.classList.add("dim-nav");
 });
 
 blackEditionButton.addEventListener("click", () => {
@@ -98,7 +106,7 @@ blackEditionButton.addEventListener("click", () => {
   removePledgeContainer();
   removeBorderColor();
   clearPledgeInputs();
-  modalMain.style.top = "300%";
+  scrollToModal(modalMain);
   const radioButton = document.querySelector("#radio-black-edition-stand");
   const radioPledge =
     radioButton.parentElement.parentElement.nextElementSibling;
@@ -107,6 +115,7 @@ blackEditionButton.addEventListener("click", () => {
   radioButton.checked = true;
   radioPledge.style.display = "block";
   editionContainer.style.border = " 2px solid var(--Moderate-cyan)";
+  navBar.classList.add("dim-nav");
 });
 
 // When radio button is selected, display pledge container
@@ -138,6 +147,8 @@ pledgeBtns[0].addEventListener("click", () => {
     newTotalBacked(input);
     newTotalBackers();
     updateProgressBar();
+    modalCompletePopup();
+    scrollToModal(modalComplete);
   }
 });
 
@@ -159,6 +170,8 @@ pledgeBtns[1].addEventListener("click", () => {
 
     decreaseAmountLeft(bambooEditionModal, bambooEditionMain);
     updateProgressBar();
+    modalCompletePopup();
+    scrollToModal(modalComplete);
   }
 });
 
@@ -177,6 +190,8 @@ pledgeBtns[2].addEventListener("click", () => {
     let blackEditionMain = document.querySelector(".black-edition-amount-left");
     decreaseAmountLeft(blackEditionModal, blackEditionMain);
     updateProgressBar();
+    modalCompletePopup();
+    scrollToModal(modalComplete);
   }
 });
 
@@ -185,6 +200,12 @@ pledgeBtns[2].addEventListener("click", () => {
 function mainModalPopup() {
   modalMain.style.display = "block";
   background.style.display = "block";
+}
+
+function modalCompletePopup() {
+  modalComplete.style.display = "block";
+  background.style.display = "block";
+  modalMain.style.display = "none";
 }
 
 function removePledgeContainer() {
@@ -259,4 +280,8 @@ function updateProgressBar() {
   const totalNum = removeSign.replace(/\,/g, "");
   const percentage = (parseInt(totalNum) / 100000) * 100;
   progressing.style.width = `${percentage}%`;
+}
+
+function scrollToModal(modal) {
+  modal.scrollIntoView();
 }
