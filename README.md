@@ -39,6 +39,7 @@ Users should be able to:
 - CSS
 - Javascript
 - Mobile-first workflow
+- Design from Figma
 
 ### What I learned
 
