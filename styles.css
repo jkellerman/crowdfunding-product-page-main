@@ -27,13 +27,14 @@ header/nav
 ============= */
 
 header {
-  background-image: url(images/image-hero-mobile.png);
+  background-image: url(images/image-hero-mobile.jpg);
   background-repeat: no-repeat;
   background-position-x: 50%;
   background-position-y: 50%;
-  background-size: 600px 400px;
+  background-size: 375px 300px;
   height: 300px;
   filter: contrast(130%);
+  z-index: -2;
 }
 
 .navbar {
@@ -66,6 +67,7 @@ header {
   opacity: 0.5;
   position: absolute;
   top: 0;
+  z-index: -1;
 }
 
 /* ==============
@@ -625,7 +627,7 @@ footer
 navigation 
 ==================*/
   header {
-    background-image: url(images/image-hero-desktop.png);
+    background-image: url(images/image-hero-desktop.jpg);
     background-repeat: no-repeat;
     background-size: unset;
     height: 400px;
