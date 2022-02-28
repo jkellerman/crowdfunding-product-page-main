@@ -144,6 +144,14 @@ pledgeBtns[1].addEventListener("click", () => {
   if (!isNaN(input) && input >= 25) {
     newTotalBacked(input);
     newTotalBackers();
+    let bambooEditionModal = document.querySelector(
+      ".modal-bamboo-edition-amount-left"
+    );
+    let bambooEditionMain = document.querySelector(
+      ".bamboo-edition-amount-left"
+    );
+
+    decreaseAmountLeft(bambooEditionModal, bambooEditionMain);
   }
 });
 
@@ -156,6 +164,11 @@ pledgeBtns[2].addEventListener("click", () => {
   if (!isNaN(input) && input >= 75) {
     newTotalBacked(input);
     newTotalBackers();
+    let blackEditionModal = document.querySelector(
+      ".modal-black-edition-amount-left"
+    );
+    let blackEditionMain = document.querySelector(".black-edition-amount-left");
+    decreaseAmountLeft(blackEditionModal, blackEditionMain);
   }
 });
 
@@ -222,4 +235,12 @@ function newTotalBackers() {
   const totalNum = totalBackersValue.replace(/\,/g, "");
   const newTotal = parseInt(totalNum) + 1;
   totalBackers.innerText = `${newTotal.toLocaleString()}`;
+}
+
+function decreaseAmountLeft(edition, edition2) {
+  const previousTotal = edition.innerText;
+  const totalNum = parseInt(previousTotal);
+  const newTotal = totalNum - 1;
+  edition.innerText = newTotal;
+  edition2.innerText = newTotal;
 }
